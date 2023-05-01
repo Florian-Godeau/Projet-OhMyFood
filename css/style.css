@@ -51,18 +51,47 @@ main {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  height: 287.5px;
-  margin: 39.5px 0 57px 0;
+  padding: 39.5px 0 57px 0;
+}
+@media screen and (min-width: 768px) {
+  .infos {
+    padding: 30px 0 30px 0;
+  }
 }
 .infos h1 {
   margin: 0;
   padding-bottom: 12px;
+}
+@media screen and (min-width: 768px) {
+  .infos h1 {
+    font-size: 40px;
+    padding-bottom: 18px;
+  }
 }
 .infos p {
   margin: 0;
   font-size: 18px;
   font-weight: 300;
   padding-bottom: 27px;
+}
+
+.button {
+  display: flex;
+  width: 218px;
+  height: 50px;
+  text-decoration: none;
+  background: linear-gradient(355deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
+  border-radius: 25px;
+  color: #FFF;
+  font-weight: 500;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  transition: 0.3s ease;
+}
+.button:hover {
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.35);
+  opacity: 0.9;
 }
 
 /*# sourceMappingURL=style.css.map */
