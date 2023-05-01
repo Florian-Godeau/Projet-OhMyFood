@@ -10,11 +10,11 @@ $white: #FFF;
 $black: #353535;
 $gray: #7E7E7E;
 $gray-medium: #EAEAEA;
-$gray-light: #F6F6F6;
+$gray-light: #F7F7F7;
 $gray-sec: #D2D2D2; 
 
 @mixin desktop {
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 1024px) {
         @content
     }
 }
@@ -108,5 +108,76 @@ main {
     transition: 0.3s ease;
     &:hover {
         @include btn-hover;
+    }
+}
+
+.functionning {
+    padding: 48px 0 0 20px;
+    margin: 0 1px 0 1px;
+    background-color: $white;
+    display: flex;
+    flex-direction: column;
+    @include desktop {
+        align-items: center;
+    }
+    h1 {
+        margin-top: 0;
+        @include desktop {
+            position: relative;
+            left: -429px;
+        }
+    }
+}
+
+.functionning-list {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 24.92px;
+    padding: 0 20px 0 12.51px;
+    @include desktop {
+        flex-direction: row;
+        gap: 36.51px;
+        justify-content: center;
+    }
+    li {
+        display: flex;
+        align-items: center;
+        background-color: $gray-light;
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+        border-radius: 20px;
+        height: 72.38px;
+        counter-increment: my-counter 1;
+        @include desktop {
+            width: 310px;
+        }
+        i {
+            color: $gray;
+            padding: 0 27px 0 9px;
+
+        }
+        &:hover {
+            i {
+                color: $color-primary;
+            }
+        }
+        &:before {
+            content: counter(my-counter);
+            background-color: $color-primary;
+            color: $white;
+            font-size: 14.18px;
+            font-weight: 500;
+            width: 24px;
+            height: 24px;
+            border-radius: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            right: 12px;
+        }
+        span {
+            font-weight: 500;
+        }
     }
 }
