@@ -112,21 +112,23 @@ main {
 }
 
 .functionning {
-    padding: 48px 0 52px 20px;
-    margin: 0 1px 0 1px;
+    padding: 48px 0 68px 20px;
+    margin: 0;
     background-color: $white;
     display: flex;
     flex-direction: column;
     @include desktop {
-        align-items: center;
         padding: 45px 0 34px 20px;
+    }
+    &--block {
+        @include desktop {
+            margin: auto;
+            width: 100%;
+            max-width: 1140px;
+        }
     }
     h1 {
         margin-top: 0;
-        @include desktop {
-            position: relative;
-            left: -429px;
-        }
     }
 }
 
@@ -150,7 +152,7 @@ main {
         height: 72.38px;
         counter-increment: my-counter 1;
         @include desktop {
-            width: 310px;
+            width: 344.5px;
         }
         i {
             color: $gray;
@@ -187,6 +189,13 @@ main {
     padding: 54px 0 0 20px;
     display: flex;
     flex-direction: column;
+    &--block {
+        @include desktop {
+        margin: auto;
+        width: 100%;
+        max-width: 1140px;
+        }
+    }
     h1 {
         margin-top: 0;
     }
@@ -195,12 +204,17 @@ main {
         color:  $black;
     }
     &--card {
-        padding: 0;
-        margin-right: 20px;
-        overflow: hidden;
-        border-radius: 15px;
-        background: $white;
-        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        padding: 0 18px 0 0;
+        @include desktop {
+            flex-direction: row;
+            flex-wrap: wrap;
+            row-gap: 50px;
+            justify-content: space-between;
+            width: 100%;
+        }
     }
     img {
         object-fit: cover;
@@ -210,6 +224,15 @@ main {
 }
 .card {
     position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    margin-bottom: 18px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    @include desktop {
+        width: 490px;
+    }
 }
 .card-content {
     display: flex;
