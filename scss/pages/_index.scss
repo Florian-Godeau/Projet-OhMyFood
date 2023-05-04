@@ -47,7 +47,7 @@
     @include desktop {
         padding: 45px 0 34px 20px;
     }
-    &--block {
+    &__block {
         @include desktop {
             margin: auto;
             width: 100%;
@@ -116,7 +116,7 @@
     padding: 54px 0 0 20px;
     display: flex;
     flex-direction: column;
-    &--block {
+    &__block {
         @include desktop {
         margin: auto;
         width: 100%;
@@ -130,7 +130,7 @@
         text-decoration: none;
         color:  $black;
     }
-    &--card {
+    &__card {
         list-style-type: none;
         display: flex;
         flex-direction: column;
