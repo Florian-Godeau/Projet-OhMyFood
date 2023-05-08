@@ -6,3 +6,50 @@
 @import "./components/button";
 @import "./pages/index";
 @import "./layout/footer";
+
+.banner {
+    height: 275px;
+    width: 100%;
+    object-fit: cover;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.menu {
+    &__card {
+        display: flex;
+        flex-direction: column;
+        background-color: $gray-light;
+        border-radius: 40px 40px 0 0;
+        position: relative;
+        bottom: 40px;
+        z-index: 2;
+        &__title {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+            h1 {
+                font-family: 'shrikhand';
+                font-size: 28px;
+                font-weight: 400;
+                padding-left: 17px;
+            }
+            .menu-like {
+                padding-top: 10px;
+            }
+        }
+        &__dishes {
+            &__title {
+            border-bottom: 3px $color-tertiary solid;
+            width: 40px;
+            margin-left: 13px;
+            h2 {
+                font-size: 16px;
+                font-weight: 300;
+                margin-bottom: 7px;
+            }
+            }
+        }
+    }
+}

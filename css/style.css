@@ -15,6 +15,26 @@
     opacity: 1;
   }
 }
+@keyframes heart-empty {
+  0% {
+    opacity: 1;
+  }
+  20% {
+    opacity: 0.9;
+  }
+  40% {
+    opacity: 0.7;
+  }
+  80% {
+    opacity: 0.5;
+  }
+  90% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 body {
   margin: 0;
   font-family: "roboto";
@@ -27,10 +47,20 @@ main {
 .header {
   display: flex;
   justify-content: center;
+  align-items: center;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
   height: 63px;
   position: relative;
   z-index: 1;
+}
+.header a {
+  position: absolute;
+  left: 20px;
+}
+.header .return-arrow {
+  font-size: 25px;
+  text-decoration: none;
+  color: black;
 }
 @media screen and (min-width: 1024px) {
   .header {
@@ -69,25 +99,33 @@ main {
 
 .like {
   margin: 20px 25px 0 0;
+  display: flex;
+  flex-wrap: nowrap;
 }
 .like i {
   font-size: 24px;
+  transition: opacity 900ms ease-in-out;
+  cursor: pointer;
 }
 .like .heart-full {
   position: relative;
-  z-index: 1;
-}
-.like .heart-full:hover {
+  opacity: 0;
   background-image: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: 700;
-  animation: heart-fill 600ms ease-in-out;
+}
+.like .heart-full:hover {
+  opacity: 1;
 }
 .like .heart-empty {
   position: relative;
-  left: 28px;
+  left: 24px;
+  opacity: 1;
+}
+.like .heart-empty:hover {
+  opacity: 0;
 }
 
 .location {
@@ -337,7 +375,7 @@ main {
   margin: 0;
 }
 @media screen and (min-width: 1024px) {
-  .footer__list--link2 {
+  .footer__list__link2 {
     padding-right: 30px;
   }
 }
@@ -357,6 +395,49 @@ main {
 .footer i {
   width: 12px;
   padding-right: 10.8px;
+}
+
+.banner {
+  height: 275px;
+  width: 100%;
+  object-fit: cover;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.menu__card {
+  display: flex;
+  flex-direction: column;
+  background-color: #F7F7F7;
+  border-radius: 40px 40px 0 0;
+  position: relative;
+  bottom: 40px;
+  z-index: 2;
+}
+.menu__card__title {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+.menu__card__title h1 {
+  font-family: "shrikhand";
+  font-size: 28px;
+  font-weight: 400;
+  padding-left: 17px;
+}
+.menu__card__title .menu-like {
+  padding-top: 10px;
+}
+.menu__card__dishes__title {
+  border-bottom: 3px #99E2D0 solid;
+  width: 40px;
+  margin-left: 13px;
+}
+.menu__card__dishes__title h2 {
+  font-size: 16px;
+  font-weight: 300;
+  margin-bottom: 7px;
 }
 
 /*# sourceMappingURL=style.css.map */
