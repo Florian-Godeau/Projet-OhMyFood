@@ -40,7 +40,7 @@ body {
   font-family: "roboto";
 }
 
-main {
+.main-index {
   background-color: #F6F6F6;
 }
 
@@ -414,11 +414,13 @@ main {
   position: relative;
   bottom: 40px;
   z-index: 2;
+  max-width: 1024px;
+  margin: auto;
 }
 .menu__card__title {
   display: flex;
   justify-content: space-between;
-  margin-top: 10px;
+  margin: auto;
 }
 .menu__card__title h1 {
   font-family: "shrikhand";
@@ -436,6 +438,11 @@ main {
   display: flex;
   flex-direction: column;
   gap: 12px;
+}
+@media screen and (min-width: 1024px) {
+  .menu__card__dishes {
+    padding: 0 210px;
+  }
 }
 .menu__card__dishes__title {
   border-bottom: 3px #99E2D0 solid;
@@ -457,13 +464,13 @@ main {
   overflow: hidden;
 }
 .menu__card__dishes__plate:hover .dish-check {
-  right: 0px;
+  width: 59px;
 }
 
 .dish-name {
   display: flex;
   flex-direction: column;
-  width: 300%;
+  flex: 1;
   overflow: hidden;
 }
 .dish-name h3 {
@@ -488,7 +495,7 @@ main {
   font-weight: 700;
   display: flex;
   align-items: flex-end;
-  justify-content: flex-end;
+  padding-right: 10px;
   margin-bottom: 13.5px;
   transition: 600ms ease-in-out;
 }
@@ -500,10 +507,14 @@ main {
   justify-content: center;
   background-color: #99E2D0;
   color: #FFF;
-  width: 65px;
-  position: relative;
-  right: -60px;
+  width: 0%;
   transition: 600ms ease-in-out;
+}
+
+.order-button {
+  display: flex;
+  justify-content: center;
+  padding: 40px 0;
 }
 
 /*# sourceMappingURL=style.css.map */
