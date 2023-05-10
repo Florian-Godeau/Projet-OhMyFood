@@ -9,13 +9,21 @@
 
 .banner {
     height: 275px;
-    width: 100%;
-    object-fit: cover;
     position: relative;
     z-index: 1;
     overflow: hidden;
     @include desktop {
         height: 380px;
+    }
+    &__img {
+        width: 100%;
+        height: 275px;
+        object-fit: cover;
+        @include desktop {
+            position: relative;
+            height: 956.14px;
+            top: -330px;
+        }
     }
 }
 
