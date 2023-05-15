@@ -11,12 +11,11 @@
         padding: 30px 25px;
         height: 70px;
     }
-    h3 {
+    h2 {
         margin: 0;
         font-family: 'shrikhand';
         font-weight: 400;
         font-size: 18px;
-        font-style: italic;
         @include desktop {
             padding-right: 40px;
         }
