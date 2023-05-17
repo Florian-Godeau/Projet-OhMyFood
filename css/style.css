@@ -474,7 +474,7 @@ body {
 }
 @media screen and (min-width: 1024px) {
   .banner {
-    height: 380px;
+    height: 444px;
   }
 }
 .banner__img {
@@ -500,6 +500,11 @@ body {
   max-width: 1024px;
   margin: -45px auto auto auto;
 }
+@media screen and (min-width: 1600px) {
+  .menu__card {
+    max-width: 1200px;
+  }
+}
 .menu__card__title {
   display: flex;
   justify-content: space-between;
@@ -515,6 +520,11 @@ body {
 .menu__card__title .menu-like {
   padding-top: 10px;
 }
+@media screen and (min-width: 1600px) {
+  .menu__card__title {
+    padding-bottom: 40px;
+  }
+}
 .menu__card__dishes {
   margin-left: 13px;
   margin-right: 13px;
@@ -525,6 +535,14 @@ body {
 @media screen and (min-width: 1024px) {
   .menu__card__dishes {
     padding: 0 210px;
+  }
+}
+@media screen and (min-width: 1600px) {
+  .menu__card__dishes {
+    flex-direction: row;
+    justify-content: space-around;
+    padding: unset;
+    padding-bottom: 30px;
   }
 }
 .menu__card__dishes__title {
@@ -545,9 +563,15 @@ body {
   box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
   position: relative;
   overflow: hidden;
+  cursor: pointer;
 }
 .menu__card__dishes__plate:hover .dish-check {
   width: 59px;
+}
+@media screen and (min-width: 1600px) {
+  .menu__card__dishes__plate {
+    width: 345px;
+  }
 }
 
 .dish-name {
@@ -598,6 +622,17 @@ body {
   display: flex;
   justify-content: center;
   padding: 40px 0;
+}
+@media screen and (min-width: 1600px) {
+  .order-button {
+    padding: 60px 0 80px 0;
+  }
+}
+
+.dishlist {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
 /*# sourceMappingURL=style.css.map */

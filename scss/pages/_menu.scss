@@ -4,7 +4,7 @@
     z-index: 1;
     overflow: hidden;
     @include desktop {
-        height: 380px;
+        height: 444px;
     }
     &__img {
         width: 100%;
@@ -28,6 +28,9 @@
         z-index: 2;
         max-width: 1024px;
         margin: -45px auto auto auto;
+        @include large-desktop {
+            max-width: 1200px;
+        }
         &__title {
             display: flex;
             justify-content: space-between;
@@ -42,6 +45,9 @@
             .menu-like {
                 padding-top: 10px;
             }
+            @include large-desktop {
+                padding-bottom: 40px;
+            }
         }
         &__dishes {
             margin-left: 13px;
@@ -51,6 +57,12 @@
             gap: 12px;
             @include desktop {
                 padding: 0 210px;
+            }
+            @include large-desktop {
+                flex-direction: row;
+                justify-content: space-around;
+                padding: unset;
+                padding-bottom: 30px;
             }
             &__title {
             border-bottom: 3px $color-tertiary solid;
@@ -70,8 +82,12 @@
                 box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
                 position: relative;
                 overflow: hidden;
+                cursor: pointer;
                 &:hover .dish-check {
                     width: 59px;
+                }
+                @include large-desktop {
+                    width: 345px;
                 }
             }
         }
@@ -122,4 +138,13 @@
     display: flex;
     justify-content: center;
     padding: 40px 0;
+    @include large-desktop {
+        padding: 60px 0 80px 0;
+    }
+}
+
+.dishlist {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
 }
