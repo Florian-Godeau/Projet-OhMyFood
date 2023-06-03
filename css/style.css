@@ -184,9 +184,6 @@ body {
 .location input::placeholder {
   opacity: 1;
 }
-.location input::-webkit-input-placeholder {
-  opacity: 1;
-}
 
 .infos {
   display: flex;
