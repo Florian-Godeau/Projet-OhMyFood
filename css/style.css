@@ -167,13 +167,22 @@ body {
   align-items: center;
   height: 50px;
   background-color: #EAEAEA;
+  opacity: 1;
 }
 .location i {
   padding-right: 17px;
 }
-.location p {
-  font-weight: 500;
+.location input {
+  font-weight: 700;
+  font-size: 16px;
+  width: 135px;
+  opacity: 1;
   color: #353535;
+  border: none;
+  background-color: #EAEAEA;
+}
+.location input::placeholder {
+  opacity: 1;
 }
 
 .infos {
@@ -378,13 +387,15 @@ body {
   position: fixed;
   z-index: 3;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  animation: loader-fade 1s ease 4s forwards;
+  animation: loader-fade 500ms ease 4s forwards;
 }
 .loader__dots {
   width: 16px;
   height: 16px;
+  margin-bottom: 30px;
   border-radius: 50%;
   background: #9356DC;
   color: #FF79DA;
@@ -392,11 +403,10 @@ body {
   animation: loader-spin 2s linear infinite;
 }
 .loader__text {
-  position: absolute;
+  position: relative;
   font-family: "shrikhand";
   font-size: 50px;
   color: #99E2D0;
-  top: 690px;
 }
 .loader__text:after {
   content: "ohmyfood";

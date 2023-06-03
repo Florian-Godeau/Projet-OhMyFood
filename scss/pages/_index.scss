@@ -4,12 +4,21 @@
     align-items: center;
     height: 50px;
     background-color: $gray-medium;
+    opacity: 1;
     i {
         padding-right: 17px;
     }
-    p {
-        font-weight: 500;
+    input {
+        font-weight: 700;
+        font-size: 16px;
+        width: 135px;
+        opacity: 1;
         color: $black;
+        border: none;
+        background-color: $gray-medium;
+        &::placeholder {
+            opacity: 1;
+        }
     }
 }
 
@@ -200,12 +209,14 @@
     position: fixed;
     z-index: 3;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    animation: loader-fade 1s ease 4s forwards;
+    animation: loader-fade 500ms ease 4s forwards;
     &__dots {
         width: 16px;
         height: 16px;
+        margin-bottom: 30px;
         border-radius: 50%;
         background: $color-primary;
         color: $color-secondary;
@@ -213,11 +224,10 @@
         animation: loader-spin 2s linear infinite;
     }
     &__text {
-       position: absolute;
+       position: relative;
        font-family: 'shrikhand';
        font-size: 50px;
        color: $color-tertiary;
-       top: 690px;
        &:after {
             content: 'ohmyfood';
             position: absolute;
