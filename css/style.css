@@ -131,34 +131,37 @@ body {
 }
 
 .like {
-  margin: 20px 25px 0 0;
-  display: flex;
-  flex-wrap: nowrap;
+  width: 24px;
+  height: 24px;
+  margin-right: 26px;
+}
+.like:hover .heart-full {
+  transform: scale(1);
+  opacity: 1;
 }
 .like i {
   font-size: 24px;
-  transition: opacity 300ms ease-in-out;
+  transition: 300ms linear;
   cursor: pointer;
 }
 .like .heart-full {
   position: relative;
-  opacity: 0;
   background-image: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: 700;
-}
-.like .heart-full:hover {
-  opacity: 1;
+  bottom: 25px;
+  transform-origin: center;
+  transform: scale(0);
 }
 .like .heart-empty {
   position: relative;
-  left: 24px;
   opacity: 1;
 }
-.like .heart-empty:hover {
-  opacity: 0;
+.like .heart-empty:hover .heart-full {
+  transform: scale(1);
+  opacity: 1;
 }
 
 .location {
@@ -230,7 +233,7 @@ body {
   .functionning__block {
     margin: auto;
     width: 100%;
-    max-width: 1140px;
+    max-width: 1090px;
   }
 }
 .functionning h1 {
@@ -300,7 +303,7 @@ body {
   .restaurants__block {
     margin: auto;
     width: 100%;
-    max-width: 1140px;
+    max-width: 1090px;
   }
 }
 .restaurants h1 {
@@ -348,6 +351,7 @@ body {
 .card-content {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 .card-content__body {
   display: flex;
@@ -484,7 +488,7 @@ body {
 }
 @media screen and (min-width: 1024px) {
   .banner {
-    height: 444px;
+    height: 385px;
   }
 }
 .banner__img {
@@ -496,7 +500,7 @@ body {
   .banner__img {
     position: relative;
     height: 956.14px;
-    top: -330px;
+    top: -385px;
   }
 }
 
@@ -519,6 +523,8 @@ body {
   display: flex;
   justify-content: space-between;
   margin: auto;
+  align-items: baseline;
+  gap: 10px;
 }
 .menu__card__title h1 {
   font-family: "shrikhand";

@@ -4,7 +4,7 @@
     z-index: 1;
     overflow: hidden;
     @include desktop {
-        height: 444px;
+        height: 385px;
     }
     &__img {
         width: 100%;
@@ -13,7 +13,7 @@
         @include desktop {
             position: relative;
             height: 956.14px;
-            top: -330px;
+            top: -385px;
         }
     }
 }
@@ -35,6 +35,8 @@
             display: flex;
             justify-content: space-between;
             margin: auto;
+            align-items: baseline;
+            gap: 10px;
             h1 {
                 font-family: 'shrikhand';
                 font-size: 28px;

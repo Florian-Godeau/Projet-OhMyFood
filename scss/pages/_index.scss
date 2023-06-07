@@ -60,7 +60,7 @@
         @include desktop {
             margin: auto;
             width: 100%;
-            max-width: 1140px;
+            max-width: 1090px;
         }
     }
     h1 {
@@ -129,7 +129,7 @@
         @include desktop {
         margin: auto;
         width: 100%;
-        max-width: 1140px;
+        max-width: 1090px;
         }
     }
     h1 {
@@ -172,6 +172,7 @@
 .card-content {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     &__body {
         display: flex;
         flex-direction: column;
