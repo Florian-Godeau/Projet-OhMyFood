@@ -155,14 +155,6 @@ body {
   transform-origin: center;
   transform: scale(0);
 }
-.like .heart-empty {
-  position: relative;
-  opacity: 1;
-}
-.like .heart-empty:hover .heart-full {
-  transform: scale(1);
-  opacity: 1;
-}
 
 .location {
   display: flex;

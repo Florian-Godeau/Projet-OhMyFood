@@ -39,12 +39,4 @@
         transform-origin: center;
         transform: scale(0);
     }
-    .heart-empty {
-        position: relative;
-        opacity: 1;
-        &:hover .heart-full {
-            transform: scale(1);
-            opacity: 1;
-        }
-    }
 }    
